@@ -41,7 +41,7 @@ const FractureNewDesignModal = ({
 
     try {
       const response = await axios.post(
-        "https://drillpilotapi.sunsab.com/api/FracturesData",
+        "https://drillpilot-backend-1.onrender.com/api/FracturesData",
         dataToSend,
         {
           headers: {

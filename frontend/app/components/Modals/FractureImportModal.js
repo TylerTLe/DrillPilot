@@ -10,12 +10,7 @@ import * as XLSX from "xlsx";
 
 let graphData = [];
 
-const FractureImportModal = ({
-  opened,
-  onClose,
-  onDataReceived,
-  ...props
-}) => {
+const FractureImportModal = ({ opened, onClose, onDataReceived, ...props }) => {
   const [incomingFile, setIncomingFile] = useState(null);
   const [isParsing, setIsParsing] = useState(false);
   const [fileName, setFileName] = useState("");
@@ -75,7 +70,7 @@ const FractureImportModal = ({
       const jsonData = JSON.stringify(parsedData, null, 2);
 
       const response = await axios.post(
-        "https://drillpilotapi.sunsab.com/api/FractureImportData",
+        "https://drillpilot-backend-1.onrender.com/api/FractureImportData",
         jsonData,
         {
           headers: {
@@ -172,8 +167,8 @@ const FractureImportModal = ({
                   Drag in your file containing fracture data.
                 </Text>
                 <Text size="sm" c="dimmed" inline mt={7}>
-                  Attach as many files as you like, each file should not
-                  exceed 5mb
+                  Attach as many files as you like, each file should not exceed
+                  5mb
                 </Text>
               </div>
             </Group>

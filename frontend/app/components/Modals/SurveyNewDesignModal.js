@@ -110,7 +110,7 @@ const SurveyNewDesignModal = ({
     const jsonData = JSON.stringify(formattedValues, null, 2);
     try {
       const sentData = await axios.post(
-        "https://drillpilotapi.sunsab.com/api/SurveyData",
+        "https://drillpilot-backend-1.onrender.com/api/SurveyData",
         jsonData,
         {
           headers: {

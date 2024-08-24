@@ -69,7 +69,7 @@ const ImportModal = ({ opened, onClose, onDataReceived, ...props }) => {
       const jsonData = JSON.stringify(parsedData, null, 2);
 
       const response = await axios.post(
-        "https://drillpilotapi.sunsab.com/api/SurveyImportData",
+        "https://drillpilot-backend-1.onrender.com/api/SurveyImportData",
         jsonData,
         {
           headers: {
